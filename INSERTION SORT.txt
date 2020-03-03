@@ -1,0 +1,32 @@
+#include<iostream>
+using namespace std;
+void insertionsort()
+{
+	int n,i,j,key,arr[100];
+	cout<<"enter n value"; //5
+	cin>>n;
+	cout<<"enter "<<n<<" values"; //20 9 42 89 63 18
+	for(i=0;i<n;i++)
+	{
+		cin>>arr[i]; //arr[i]=20 9 42 89 63 18
+	}
+	for(i=1;i<n;i++)
+	{
+		key=arr[i];
+		int j=i-1;
+		while(j>=0 && arr[j]>key)
+		{
+			arr[j+1]=arr[j];
+			j--;
+		}
+		arr[j+1]=key;
+    }
+for(i=0;i<n;i++)
+{
+	cout<<arr[i]<<"\t";
+}
+}
+int main()
+{
+	insertionsort();
+}
